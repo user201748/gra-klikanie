@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Gra w klikanie!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #klikBtn {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #klikBtn:hover {
+    background-color: #45a049;
+  }
+  #wynik {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #333;
+  }
+</style>
+<script>
+let liczbaKlikniec = 0;
+
+function kliknij() {
+  liczbaKlikniec++;
+  document.getElementById("wynik").innerText = "Kliknięcia: " + liczbaKlikniec;
+}
+</script>
+</head>
+
+<body>
+
+<h1>Gra w klikanie!</h1>
+<button id="klikBtn" onclick="kliknij()">Kliknij mnie!</button>
+<div id="wynik">Kliknięcia: 0</div>
+
+</body>
+</html>
